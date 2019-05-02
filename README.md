@@ -1,105 +1,199 @@
 # LearnGitHub
-#### STAPI
+<a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
 
-Everyone can code because we are part of the matrix
+<!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
 
-Use the Star Trek API (STAPI) to obtain information on the infamous character, Q. Specifically, retrieve data on his appearances and the stardates when he shows up. The first API call does a lightweight, unobtrusive check to see how many pages of potential search results exist for characters in the database. There are a lot of characters. The second call grabs only page two results. The third call uses the universal/unique ID `uid` to retrieve data on Q. Think of these three successive uses of `stapi` as safe mode, search mode and extraction mode.
+***INSERT GRAPHIC HERE (include hyperlink in image)***
 
-``` r
-library(rtrek)
-library(dplyr)
-stapi("character", page_count = TRUE)
-#> Total pages to retrieve all results: 64
+# Repository Title Goes Here
 
-stapi("character", page = 2)
-#> # A tibble: 100 x 24
-#>    uid   name  gender yearOfBirth monthOfBirth dayOfBirth placeOfBirth
-#>    <chr> <chr> <chr>        <int> <lgl>        <lgl>      <chr>       
-#>  1 CHMA~ Stev~ <NA>            NA NA           NA         <NA>        
-#>  2 CHMA~ Yegg~ M               NA NA           NA         <NA>        
-#>  3 CHMA~ Arex  M               NA NA           NA         <NA>        
-#>  4 CHMA~ Jose~ M               NA NA           NA         <NA>        
-#>  5 CHMA~ J. Z~ <NA>            NA NA           NA         <NA>        
-#>  6 CHMA~ Doyle M               NA NA           NA         <NA>        
-#>  7 CHMA~ Butl~ M               NA NA           NA         <NA>        
-#>  8 CHMA~ Lito  M               NA NA           NA         <NA>        
-#>  9 CHMA~ B. M~ <NA>            NA NA           NA         <NA>        
-#> 10 CHMA~ Anna~ <NA>            NA NA           NA         <NA>        
-#> # ... with 90 more rows, and 17 more variables: yearOfDeath <int>,
-#> #   monthOfDeath <lgl>, dayOfDeath <lgl>, placeOfDeath <lgl>,
-#> #   height <int>, weight <int>, deceased <lgl>, bloodType <lgl>,
-#> #   maritalStatus <chr>, serialNumber <chr>, hologramActivationDate <lgl>,
-#> #   hologramStatus <lgl>, hologramDateStatus <lgl>, hologram <lgl>,
-#> #   fictionalCharacter <lgl>, mirror <lgl>, alternateReality <lgl>
+> Subtitle or Short Description Goes Here
 
-Q <- "CHMA0000025118"  #unique ID
-Q <- stapi("character", uid = Q)
-Q$episodes %>% select(uid, title, stardateFrom, stardateTo)
-#>              uid                 title stardateFrom stardateTo
-#> 1 EPMA0000001458    All Good Things...      47988.0    47988.0
-#> 2 EPMA0000001329                 Q Who      42761.3    42761.3
-#> 3 EPMA0000001377                  Qpid      44741.9    44741.9
-#> 4 EPMA0000000483 Encounter at Farpoint      41153.7    41153.7
-#> 5 EPMA0000000651              Tapestry           NA         NA
-#> 6 EPMA0000000845                Q-Less      46531.2    46531.2
-#> 7 EPMA0000162588            Death Wish           NA         NA
-#> 8 EPMA0000001413                True Q      46192.3    46192.3
-#> 9 EPMA0000001510    The Q and the Grey      50384.2    50392.7
+> ideally one sentence
+
+> include terms/tags that can be searched
+
+**Badges will go here**
+
+- build status
+- issues (waffle.io maybe)
+- devDependencies
+- npm package
+- coverage
+- slack
+- downloads
+- gitter chat
+- license
+- etc.
+
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![Dependency Status](http://img.shields.io/gemnasium/badges/badgerbadgerbadger.svg?style=flat-square)](https://gemnasium.com/badges/badgerbadgerbadger) [![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) [![Code Climate](http://img.shields.io/codeclimate/github/badges/badgerbadgerbadger.svg?style=flat-square)](https://codeclimate.com/github/badges/badgerbadgerbadger) [![Github Issues](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/issues.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/issues) [![Pending Pull-Requests](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/pulls.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/pulls) [![Gem Version](http://img.shields.io/gem/v/badgerbadgerbadger.svg?style=flat-square)](https://rubygems.org/gems/badgerbadgerbadger) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) [![Badges](http://img.shields.io/:badges-9/9-ff6799.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger)
+
+- For more on these wonderful ~~badgers~~ badges, refer to <a href="http://badges.github.io/badgerbadgerbadger/" target="_blank">`badgerbadgerbadger`</a>.
+
+***INSERT ANOTHER GRAPHIC HERE***
+
+[![INSERT YOUR GRAPHIC HERE](http://i.imgur.com/dt8AUb6.png)]()
+
+- Most people will glance at your `README`, *maybe* star it, and leave
+- Ergo, people should understand instantly what your project is about based on your repo
+
+> Tips
+
+- HAVE WHITE SPACE
+- MAKE IT PRETTY
+- GIFS ARE REALLY COOL
+
+> GIF Tools
+
+- Use <a href="http://recordit.co/" target="_blank">**Recordit**</a> to create quicks screencasts of your desktop and export them as `GIF`s.
+- For terminal sessions, there's <a href="https://github.com/chjj/ttystudio" target="_blank">**ttystudio**</a> which also supports exporting `GIF`s.
+
+**Recordit**
+
+![Recordit GIF](http://g.recordit.co/iLN6A0vSD8.gif)
+
+**ttystudio**
+
+![ttystudio GIF](https://raw.githubusercontent.com/chjj/ttystudio/master/img/example.gif)
+
+---
+
+## Table of Contents (Optional)
+
+> If you're `README` has a lot of info, section headers might be nice.
+
+- [Installation](#installation)
+- [Features](#features)
+- [Contributing](#contributing)
+- [Team](#team)
+- [FAQ](#faq)
+- [Support](#support)
+- [License](#license)
+
+
+---
+
+## Example (Optional)
+
+```javascript
+// code away!
+
+let generateProject = project => {
+  let code = [];
+  for (let js = 0; js < project.length; js++) {
+    code.push(js);
+  }
+};
 ```
 
-### Memory Alpha
+---
 
-Obtain content and metadata from the article about Spock on Memory Alpha:
+## Installation
 
-``` r
-x <- ma_article("Spock")
-x
-#> # A tibble: 1 x 4
-#>   title content           metadata          categories       
-#>   <chr> <list>            <list>            <list>           
-#> 1 Spock <S3: xml_nodeset> <tibble [1 x 17]> <tibble [14 x 2]>
-x$metadata[[1]]$Born
-#> [1] "January 6, 2230 (stardate 2230.06)|ShiKahr, Vulcan"
+- All the `code` required to get started
+- Images of what it should look like
+
+### Clone
+
+- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
+
+### Setup
+
+- If you want more syntax highlighting, format your code like this:
+
+> update and install this package first
+
+```shell
+$ brew update
+$ brew install fvcproductions
 ```
 
-### Memory Beta
+> now install npm and bower packages
 
-Spock was born in 2230. Obtain a subset of the Star Trek universe historical timeline for that year:
-
-``` r
-mb_timeline(2230)
-#> 2230
-#> $events
-#> # A tibble: 5 x 4
-#>   period id            date  notes                                         
-#>   <chr>  <chr>         <chr> <chr>                                         
-#> 1 2230   Events        <NA>  Argelius II  and Betelgeuse become members of~
-#> 2 2230   Births_and_D~ <NA>  Spock is born deep within a cave in Vulcan's ~
-#> 3 2230   Births_and_D~ <NA>  George Samuel Kirk, Jr. is born.[5]           
-#> 4 2230   Births_and_D~ <NA>  David Rabin is born.[6]                       
-#> 5 2230   Births_and_D~ <NA>  Roy John Moss is born.[7]                     
-#> 
-#> $stories
-#> # A tibble: 5 x 11
-#>   title title_url colleciton collection_url section context series date 
-#>   <chr> <chr>     <chr>      <chr>          <chr>   <chr>   <chr>  <chr>
-#> 1 Burn~ Burning_~ <NA>       <NA>           Chapte~ <NA>    The O~ 2230 
-#> 2 Star~ Star_Tre~ <NA>       <NA>           Chapte~ <NA>    The O~ 2230 
-#> 3 IDW ~ IDW_Star~ Star Trek~ Star_Trek_(ID~ 2230 f~ <NA>    The O~ 2230 
-#> 4 Star~ Star_Tre~ <NA>       <NA>           Chapte~ <NA>    The O~ 2230 
-#> 5 Sarek Sarek_(n~ <NA>       <NA>           Chapte~ <NA>    The O~ 12 N~
-#> # ... with 3 more variables: media <chr>, notes <chr>, image_url <chr>
+```shell
+$ npm install
+$ bower install
 ```
 
-Live long and prosper.
+- For all the possible languages that support syntax highlithing on GitHub (which is basically all of them), refer <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml" target="_blank">here</a>.
 
-See the [introduction vignette](https://leonawicz.github.io/rtrek/articles/rtrek.html) for more details and examples.
+---
 
-Reference
----------
+## Features
+## Usage (Optional)
+## Documentation (Optional)
+## Tests (Optional)
 
-[Complete package reference and function documentation](https://leonawicz.github.io/rtrek/)
+- Going into more detail on code and technologies used
+- I utilized this nifty <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown Cheatsheet</a> for this sample `README`.
 
-------------------------------------------------------------------------
+---
 
-Please note that the `rtrek` project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
+## Contributing
+
+> To get started...
+
+### Step 1
+
+- **Option 1**
+    - 🍴 Fork this repo!
+
+- **Option 2**
+    - 👯 Clone this repo to your local machine using `https://github.com/joanaz/HireDot2.git`
+
+### Step 2
+
+- **HACK AWAY!** 🔨🔨🔨
+
+### Step 3
+
+- 🔃 Create a new pull request using <a href="https://github.com/joanaz/HireDot2/compare/" target="_blank">`https://github.com/joanaz/HireDot2/compare/`</a>.
+
+---
+
+## Team
+
+> Or Contributors/People
+
+| <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> | <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> | <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> |
+| :---: |:---:| :---:|
+| [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com)    | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com)  |
+| <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> |
+
+- You can just grab their GitHub profile image URL
+- You should probably resize their picture using `?s=200` at the end of the image URL.
+
+---
+
+## FAQ
+
+- **How do I do *specifically* so and so?**
+    - No problem! Just do this.
+
+---
+
+## Support
+
+Reach out to me at one of the following places!
+
+- Website at <a href="http://fvcproductions.com" target="_blank">`fvcproductions.com`</a>
+- Twitter at <a href="http://twitter.com/fvcproductions" target="_blank">`@fvcproductions`</a>
+- Insert more social links here.
+
+---
+
+## Donations (Optional)
+
+- You could include a <a href="https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png" target="_blank">Gratipay</a> link as well.
+
+[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/fvcproductions/)
+
+
+---
+
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+- Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
